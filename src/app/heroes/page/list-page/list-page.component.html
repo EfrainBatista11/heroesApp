@@ -1,0 +1,18 @@
+<!-- <ul>
+  @for (hero of heroes; track hero.id) {
+  <li>{{ hero.superhero }}</li>
+  }
+</ul> -->
+
+<h1>Listado de Héroes</h1>
+<mat-divider></mat-divider>
+
+<div class="grid bm-8 pt-2">
+ 
+    @for (hero of heroes; track hero.id) {
+         <div class="col-12 sm:col-4 md:col-3 xl:col-2">
+        <heroes-hero-card [hero]="hero"></heroes-hero-card>
+        </div> 
+    }
+ 
+</div>
