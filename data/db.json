@@ -36,8 +36,9 @@
       "superhero": "Green Lantern",
       "publisher": "DC Comics",
       "alter_ego": "Alan Scott",
-      "first_appearance": "All-American Comics #16",
-      "characters": "Alan Scott, Hal Jordan, Guy Gardner, John Stewart, Kyle Raynor, Jade, Sinestro, Simon Baz"
+      "first_appearance": "All-American Comics #16 ejemplo",
+      "characters": "Alan Scott, Hal Jordan, Guy Gardner, John Stewart, Kyle Raynor, Jade, Sinestro, Simon Baz",
+      "alt_img": null
     },
     {
       "id": "dc-arrow",
@@ -54,14 +55,6 @@
       "alter_ego": "Princess Diana",
       "first_appearance": "All Star Comics #8",
       "characters": "Princess Diana"
-    },
-    {
-      "id": "dc-martian",
-      "superhero": "Martian Manhunter",
-      "publisher": "DC Comics",
-      "alter_ego": "J\"onn J\"onzz",
-      "first_appearance": "Detective Comics #225",
-      "characters": "Martian Manhunter"
     },
     {
       "id": "dc-robin",
@@ -86,14 +79,6 @@
       "alter_ego": "Dinah Drake",
       "first_appearance": "Flash Comics #86",
       "characters": "Dinah Drake, Dinah Lance"
-    },
-    {
-      "id": "marvel-spider",
-      "superhero": "Spider Man",
-      "publisher": "Marvel Comics",
-      "alter_ego": "Peter Parker",
-      "first_appearance": "Amazing Fantasy #15",
-      "characters": "Peter Parker"
     },
     {
       "id": "marvel-captain",
@@ -172,7 +157,7 @@
       "superhero": "Squirtle",
       "publisher": "DC Comics",
       "alter_ego": "Squirtle",
-      "first_appearance": "Squirtle",
+      "first_appearance": "Pokemon 1",
       "characters": "Squirtle",
       "alt_img": "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/007.png"
     }

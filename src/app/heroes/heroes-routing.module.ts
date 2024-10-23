@@ -14,7 +14,7 @@ const routes: Routes = [
     children: [
       { path: 'new-hero', component: NewPageComponent},
       { path: 'search', component: SearchPageComponent},
-      { path: 'edit:/id', component: NewPageComponent},
+      { path: 'edit/:id', component: NewPageComponent},
       { path: 'list', component: ListPageComponent},
       // Esta siempre al final porque es un comodín, todas las de arriba 
       // concuerda con esta si se coloca arriba.
