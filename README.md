@@ -9,6 +9,21 @@
 3. Levantar backend ```npm run backend```
 4. Ejecutar la app ```npm start``` o bien ```ng serve -o```
 
+# Temas tratados
+
+Sección 13: Rutas hijas y LazyLoading
+Sección 14: Angular Material y PrimeFlex
+Sección 15: CRUD Heroes
+Sección 16: Protección de Rutas
+	Protección de rutas
+	Rutas privadas
+	Rutas públicas
+	Servicio de autenticación
+	Guards
+	Can Activate
+	Can Match
+	Mantener la sesión del usuario
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.1.
 
 ## Development server
