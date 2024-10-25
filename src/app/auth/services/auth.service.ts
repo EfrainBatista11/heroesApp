@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environments } from '../../../environments/environments';
 import { User } from '../interfaces/user.interface';
-import { Observable, tap } from 'rxjs';
+import { catchError, map, Observable, of, tap } from 'rxjs';
 
 @Injectable({providedIn: 'root'})
 export class AuthService {
@@ -23,12 +23,33 @@ export class AuthService {
         // http.post('login', {email, password});
 
         // Esta es solo de ejemplo
-       return this.http.get<User>(`${ this.baseUrl}/user/1`)
+       return this.http.get<User>(`${ this.baseUrl}/users/1`)
         .pipe(
             tap( user => this.user = user),
             // Guardo el id como si fuera token
-            tap(user => localStorage.setItem('token', user.id.toString())), 
+            tap(user => localStorage.setItem('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c')), 
         );
         // Falta el catch error
     }
+
+    checkAuthentication(): Observable<boolean>{
+
+        if (!localStorage.getItem('token')) return of(false);
+
+        const token = localStorage.getItem('token');
+
+        return this.http.get<User>(`${ this.baseUrl}/users/1`)
+        .pipe(
+            tap( user => this.user = user),
+            map( user => !!user ), // Esta doble negación es javascript 
+            catchError( err => of(false))
+        )
+    }
+
+    logout(){
+        this.user = undefined;
+        localStorage.clear(); // Remover cualquier cosa del local storage
+    }
+
+
 }
